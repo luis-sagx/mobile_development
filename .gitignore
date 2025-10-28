@@ -1,2 +1,31 @@
 *.pdf
 *.docx
+# Flutter/Dart
+.dart_tool/
+.idea/
+.vscode/
+.packages
+pubspec.lock
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+# Sistemas operativos
+*.log
+*.tmp
+*.zip
+*.ppt
+*.pptx
+*.DS_Store
+Thumbs.db
+
+# Android/iOS builds
+android/
+ios/
+macos/
+linux/
+windows/
+web/
+
+venv/
