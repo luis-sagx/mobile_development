@@ -31,10 +31,9 @@ class SalaryView extends StatelessWidget {
               'Sueldo del Vendedor: \$${salary.toStringAsFixed(2)}',
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
 
             Card(
-              elevation: 4,
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
@@ -55,12 +54,15 @@ class SalaryView extends StatelessWidget {
                       'IVA (15%): \$${invoice['taxes']!.toStringAsFixed(2)}',
                     ),
                     Text(
-                      'Descuento (20% si > 2000): \$${invoice['discount']!.toStringAsFixed(2)}',
+                      'Descuento: \$${invoice['discount']!.toStringAsFixed(2)}',
                     ),
                     const Divider(),
                     Text(
                       'Total a Pagar: \$${invoice['totalInvoice']!.toStringAsFixed(2)}',
-                      style: const TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
                     ),
                   ],
                 ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:salary_and_sells/controllers/seller_controller.dart';
+import 'package:salary_and_sells/widget/calculate_button.dart';
+import 'package:salary_and_sells/widget/input_sell.dart';
 
 class SellsView extends StatefulWidget {
   const SellsView({super.key});
@@ -32,29 +34,22 @@ class _SellsViewState extends State<SellsView> {
         padding: const EdgeInsets.all(12.0),
         child: Column(
           children: [
-            TextField(
+            InputSell(
               controller: sell1Controller,
-              decoration: const InputDecoration(
-                labelText: 'Enter first month sell',
-              ),
+              label: 'Enter first month sell',
             ),
-            TextField(
+            const SizedBox(height: 10),
+            InputSell(
               controller: sell2Controller,
-              decoration: const InputDecoration(
-                labelText: 'Enter second month sell',
-              ),
+              label: 'Enter second month sell',
             ),
-            TextField(
+            const SizedBox(height: 10),
+            InputSell(
               controller: sell3Controller,
-              decoration: const InputDecoration(
-                labelText: 'Enter third month sell',
-              ),
+              label: 'Enter third month sell',
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _calculate,
-              child: const Text('Calculate Salary'),
-            ),
+            CalculateButton(text: 'Calculate', onPressed: _calculate),
           ],
         ),
       ),
